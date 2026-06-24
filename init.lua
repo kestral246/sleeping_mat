@@ -32,6 +32,14 @@ beds.register_bed("sleeping_mat:mat", {
 	},
 })
 
+-- Hide the new small top selection box within the mat.
+minetest.override_item("sleeping_mat:mat_top", {
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.2, -0.48, -0.2, 0.2, -0.4575, 0.2},
+	},
+})
+
 minetest.register_craft({  -- without marram_grass
 	output = "sleeping_mat:mat",
 	type = "shapeless",
